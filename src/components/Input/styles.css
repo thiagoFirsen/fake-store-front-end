@@ -1,0 +1,43 @@
+.containerInputs {
+  display: flex;
+  justify-content: space-between;
+}
+.containerInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 449px;
+  height: 64px;
+  background: #ffffff;
+  border: 1px solid #c1dcdc;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.containerInput input {
+  width: 449px;
+  border: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
+}
+
+.containerInput button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background: #c1dcdc;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.containerInput button img {
+  width: 20px;
+  height: 20px;
+}

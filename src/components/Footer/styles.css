@@ -1,0 +1,111 @@
+footer {
+  width: 100vw;
+  height: 400px;
+  background-color: #c1dcdc;
+  padding-left: 96px;
+  padding-top: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerFooter {
+  width: 192px;
+  height: 179px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.containerText {
+  width: 189px;
+  height: 107px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.containerText h3 {
+  width: 107px;
+  height: 29px;
+  font-family: "Abhaya Libre";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  color: #000000;
+}
+
+.containerText p {
+  width: 189px;
+  height: 54px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
+}
+
+.containerLinks {
+  width: 192px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.containerLinks a {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(30, 30, 30, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textFooter {
+  width: 429px;
+  height: 27px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
+  margin-top: 98px;
+}
+
+.containerInformations {
+  display: flex;
+  flex-direction: row;
+  margin-right: 96px;
+  width: 452px;
+  height: 180px;
+  gap: 48px;
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cardFooter h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #1e1e1e;
+}
+
+.cardFooter a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
+  text-decoration: none;
+}

@@ -1,0 +1,27 @@
+.cardProduct {
+  width: 299.33px;
+  height: 436px;
+}
+
+.cardProduct img {
+  width: 299.33px;
+  height: 363px;
+  border-radius: 12px;
+}
+
+.cardProduct h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #1e1e1e;
+}
+
+.cardProduct p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
+}

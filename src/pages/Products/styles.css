@@ -1,0 +1,24 @@
+.containerInput {
+  display: flex;
+  justify-content: space-between;
+  margin: 55px 60px 57px 68px;
+}
+
+.containerProducts h1 {
+  text-align: center;
+  margin-bottom: 67px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: #1e1e1e;
+}
+
+.containerCardProduct {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 139px;
+  margin: 0px 123px 102px 139px;
+}
