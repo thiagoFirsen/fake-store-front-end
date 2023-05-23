@@ -1,0 +1,30 @@
+.coitainerCategories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 977px;
+  align-items: center;
+  background: #ffffff;
+}
+
+.cointanerCardCategories {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 96px;
+}
+
+#buttonCategories {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 10px;
+  width: 147px;
+  height: 51px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}

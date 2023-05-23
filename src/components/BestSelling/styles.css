@@ -1,0 +1,61 @@
+.containerBestSelling {
+  width: 100vw;
+  height: 532px;
+  display: flex;
+  padding: 47px 96px 50px 96px;
+  gap: 10px;
+}
+
+.descriptionBestSelling {
+  width: 256px;
+  height: 264px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+}
+
+.descriptionBestSelling h1 {
+  width: 256px;
+  height: 96px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: #1e1e1e;
+}
+
+.descriptionBestSelling h2 {
+  width: 196px;
+  height: 81px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
+}
+
+.descriptionBestSelling button {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 10px;
+  background: #c1dcdc;
+  border-radius: 8px;
+  border: none;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #1e1e1e;
+}
+
+.descriptionBestSelling button img {
+  width: 24px;
+  height: 20px;
+}

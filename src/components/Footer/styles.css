@@ -73,13 +73,13 @@ footer {
   font-size: 18px;
   line-height: 27px;
   color: rgba(30, 30, 30, 0.5);
-  margin-top: 98px;
+  padding-top: 98px;
 }
 
 .containerInformations {
   display: flex;
   flex-direction: row;
-  margin-right: 96px;
+  padding-right: 96px;
   width: 452px;
   height: 180px;
   gap: 48px;
