@@ -24,7 +24,6 @@ const Product = () => {
 
   const calculateStars = (response) => {
     const width = 100 - response.rating.rate * 20;
-    console.log(width);
     return width;
   };
 
@@ -43,6 +42,16 @@ const Product = () => {
         <div className="coitainerProductDetails">
           <Line />
           <div className="containerInformationsProduct">
+            <Details title={"Produto"} description={product.title} />
+            <Details title={"Categoria"} description={product.category} />
+          </div>
+          <Line />
+          <div className="containerInformationsProduct bigTitle">
+            <Details description={`R$ ${product.price.toFixed(2)}`} />
+            <Details title={"Descrição"} description={product.description} />
+          </div>
+          <Line />
+          <div className="containerInformationsProduct displayRow">
             <div className="starsContainer">
               <img src={stars} alt="Estrelinhas" />
               <div
@@ -52,19 +61,8 @@ const Product = () => {
             </div>
 
             <Details
-              title={"Count"}
               description={`${product.rating.count} avalições de clientes`}
             />
-          </div>
-          <Line />
-          <div className="containerInformationsProduct">
-            <Details title={"Preço"} description={product.price} />
-            <Details title={"Descrição"} description={product.description} />
-          </div>
-          <Line />
-          <div className="containerInformationsProduct">
-            <Details title={"Produto"} description={product.title} />
-            <Details title={"Categoria"} description={product.category} />
           </div>
           <Line />
         </div>

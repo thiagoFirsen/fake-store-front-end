@@ -61,6 +61,12 @@
   padding: 25px 0px 15px 0px;
 }
 
+.displayRow {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
 .containerInformationsProduct h3 {
   font-family: "Poppins";
   font-style: normal;
@@ -77,4 +83,12 @@
   font-size: 14px;
   line-height: 21px;
   color: #000000;
+}
+
+.bigTitle h4:first-of-type {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 45px;
 }
