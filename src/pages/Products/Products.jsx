@@ -6,6 +6,7 @@ import Search from "../../assets/Product/Search.svg";
 import setaPraBaixo from "../../assets/Product/setaPraBaixo.svg";
 import "./styles.css";
 import { Link } from "react-router-dom";
+import Loader from "../../components/Loader/Loader";
 
 const Products = () => {
   const [products, setProducts] = useState();
@@ -34,20 +35,24 @@ const Products = () => {
         />
       </div>
       <h1>Products</h1>
-      <div className="containerCardProduct">
-        {products?.map((product) => {
-          return (
-            <Link to={`/Products/${product.id}`}>
-              <CardProduct
-                key={product.id}
-                img={product.image}
-                title={product.title}
-                price={product.price}
-              />
-            </Link>
-          );
-        })}
-      </div>
+      {products ? (
+        <div className="containerCardProduct">
+          {products?.map((product) => {
+            return (
+              <Link to={`/Products/${product.id}`}>
+                <CardProduct
+                  key={product.id}
+                  img={product.image}
+                  title={product.title}
+                  price={`R$: ${product.price.toFixed(2)}`}
+                />
+              </Link>
+            );
+          })}
+        </div>
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 };

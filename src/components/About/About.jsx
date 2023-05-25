@@ -8,7 +8,7 @@ import phone from "../../assets/Home/phone.svg";
 const About = () => {
   return (
     <div className="cointainerAbout">
-      <div className="About">
+      <div className="about">
         <Title
           title={"About us"}
           description={"Order now and appreciate the beauty of nature"}

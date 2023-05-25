@@ -7,5 +7,8 @@ export async function getProducts() {
 
 export async function getProduct(id) {
   const response = await api.get(`products/${id}`);
+  if (response.data === "") {
+    return alert("Produto não encontrado");
+  }
   return response.data;
 }

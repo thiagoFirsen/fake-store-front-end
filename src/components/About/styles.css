@@ -6,8 +6,13 @@
   align-items: center;
 }
 
+.about {
+  max-width: 100%;
+}
+
 .cointanerCard {
   display: flex;
+  justify-content: space-between;
   height: 213px;
 }
 

@@ -4,6 +4,7 @@ import Products from "./pages/Products/Products";
 import Product from "./pages/Product/Product";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import "./app.css";
 
 function App() {
   return (
@@ -17,9 +18,11 @@ function App() {
           <Route
             path="*"
             element={
-              <h1 style={{ textAlign: "center" }}>
-                404 ERROR - PAGE NOT FOUND
-              </h1>
+              <div className="main">
+                <h1 style={{ textAlign: "center" }}>
+                  404 ERROR - PAGE NOT FOUND
+                </h1>
+              </div>
             }
           />
         </Routes>

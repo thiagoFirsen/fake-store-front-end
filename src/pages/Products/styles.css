@@ -22,7 +22,7 @@
 .containerCardProduct {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 139px;
   padding: 0px 123px 102px 139px;
 }

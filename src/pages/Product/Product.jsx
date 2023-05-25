@@ -5,70 +5,70 @@ import "./styles.css";
 import { getProduct } from "../../services/products";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Loader from "../../components/Loader/Loader";
+import stars from "../../assets/Product/stars.svg";
 
 const Product = () => {
+  const [product, setProduct] = useState();
   const { id } = useParams();
-
-  const [products, setProducts] = useState();
 
   useEffect(() => {
     getProduct(id)
       .then((response) => {
-        setProducts(response);
+        setProduct(response);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
 
-  if (!id || !products) {
-    return <h1 style={{ textAlign: "center" }}>PRODUTO NÃO ENCONTRADO</h1>;
-  }
+  const calculateStars = (response) => {
+    const width = 100 - response.rating.rate * 20;
+    console.log(width);
+    return width;
+  };
+
   return (
     <div className="cointanerProduct">
-      <div className="coitainerResumeProduct">
-        <h1>{products ? products.title : ""}</h1>
-        <CardProduct img={products ? products.image : ""} />
-      </div>
+      {product ? (
+        <div className="coitainerResumeProduct">
+          <h1>{product.title}</h1>
+          <CardProduct img={product.image} />
+        </div>
+      ) : (
+        <Loader />
+      )}
 
-      <div className="coitainerProductDetails">
-        <div>
+      {product && (
+        <div className="coitainerProductDetails">
           <Line />
           <div className="containerInformationsProduct">
+            <div className="starsContainer">
+              <img src={stars} alt="Estrelinhas" />
+              <div
+                className="cover"
+                style={product && { width: `${calculateStars(product)}%` }}
+              ></div>
+            </div>
+
             <Details
-              title={"Rating"}
-              description={products ? products.rating.rate : ""}
-            />
-            <Details
-              title={"Rate"}
-              description={products ? products.rating.count : ""}
+              title={"Count"}
+              description={`${product.rating.count} avalições de clientes`}
             />
           </div>
           <Line />
           <div className="containerInformationsProduct">
-            <Details
-              title={"Preço"}
-              description={products ? products.price : ""}
-            />
-            <Details
-              title={"Descrição"}
-              description={products ? products.description : ""}
-            />
+            <Details title={"Preço"} description={product.price} />
+            <Details title={"Descrição"} description={product.description} />
           </div>
           <Line />
           <div className="containerInformationsProduct">
-            <Details
-              title={"Produto"}
-              description={products ? products.title : ""}
-            />
-            <Details
-              title={"Categoria"}
-              description={products ? products.category : ""}
-            />
+            <Details title={"Produto"} description={product.title} />
+            <Details title={"Categoria"} description={product.category} />
           </div>
           <Line />
         </div>
-      </div>
+      )}
     </div>
   );
 };

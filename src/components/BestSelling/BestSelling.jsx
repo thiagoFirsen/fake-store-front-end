@@ -9,7 +9,7 @@ const BestSelling = () => {
         <h1>Best Selling Plants</h1>
         <h2>Easiest way to healthy life by buying your favorite plants </h2>
         <button>
-          See more <img src={ArrowRight} alt="" />{" "}
+          See more <img src={ArrowRight} alt="" />
         </button>
       </div>
       <div className="cointainerProductsBestSelling">
