@@ -3,8 +3,8 @@ const CardProduct = ({ img, title, price }) => {
   return (
     <div className="cardProduct">
       <img src={img} alt="" />
-      <h4>{title}</h4>
-      <p>{"₱" + price}</p>
+      {title && <h4>{title}</h4>}
+      {price && <p>{price}</p>}
     </div>
   );
 };

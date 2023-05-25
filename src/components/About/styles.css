@@ -1,22 +1,22 @@
 .cointainerAbout {
-  width: 100vw;
   height: 513px;
   background: #c1dcdc;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .cointanerCard {
   display: flex;
   height: 213px;
-  gap: 24px;
-  margin: 48px 96px 96px 96px;
 }
+
 .cointainerCardAbout {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  width: 400px;
 }
 
 .cointainerCardAbout img {

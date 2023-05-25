@@ -12,21 +12,23 @@ const BestSelling = () => {
           See more <img src={ArrowRight} alt="" />{" "}
         </button>
       </div>
-      <CardProduct
-        img={"Vazio"}
-        title={"Natural Plants"}
-        price={"₱ 1,400.00"}
-      />
-      <CardProduct
-        img={"Vazio"}
-        title={"Natural Plants"}
-        price={"₱ 1,400.00"}
-      />
-      <CardProduct
-        img={"Vazio"}
-        title={"Natural Plants"}
-        price={"₱ 1,400.00"}
-      />
+      <div className="cointainerProductsBestSelling">
+        <CardProduct
+          img={"Vazio"}
+          title={"Natural Plants"}
+          price={"₱ 1,400.00"}
+        />
+        <CardProduct
+          img={"Vazio"}
+          title={"Natural Plants"}
+          price={"₱ 1,400.00"}
+        />
+        <CardProduct
+          img={"Vazio"}
+          title={"Natural Plants"}
+          price={"₱ 1,400.00"}
+        />
+      </div>
     </div>
   );
 };

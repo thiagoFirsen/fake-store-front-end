@@ -1,11 +1,7 @@
-const fetchData = async () => {
-  try {
-    const response = await fetch("https://fakestoreapi.com/products");
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.log("Ocorreu um erro", error);
-  }
-};
+import axios from "axios";
 
-export default fetchData;
+const api = axios.create({
+  baseURL: "https://fakestoreapi.com/",
+});
+
+export default api;

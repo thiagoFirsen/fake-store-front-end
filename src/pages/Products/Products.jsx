@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react";
 import CardProduct from "../../components/CardProduct/CardProduct";
-import fetchData from "../../services/api";
+import { getProducts } from "../../services/products";
 import Input from "../../components/Input/Input";
 import Search from "../../assets/Product/Search.svg";
 import setaPraBaixo from "../../assets/Product/setaPraBaixo.svg";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState();
+
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const data = await fetchData();
-        setProducts(data);
-      } catch (error) {
-        console.error(`Erro ao buscar os produtos: ${error}`);
-      }
-    };
-    fetchProducts();
+    getProducts()
+      .then((response) => {
+        setProducts(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
   return (
     <div className="containerProducts">
@@ -35,14 +35,16 @@ const Products = () => {
       </div>
       <h1>Products</h1>
       <div className="containerCardProduct">
-        {products.map((product) => {
+        {products?.map((product) => {
           return (
-            <CardProduct
-              key={product.id}
-              img={product.image}
-              title={product.title}
-              price={product.price}
-            />
+            <Link to={`/Products/${product.id}`}>
+              <CardProduct
+                key={product.id}
+                img={product.image}
+                title={product.title}
+                price={product.price}
+              />
+            </Link>
           );
         })}
       </div>

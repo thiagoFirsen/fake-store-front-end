@@ -4,6 +4,10 @@
   margin: 55px 60px 57px 68px;
 }
 
+.containerCardProduct a {
+  text-decoration: none;
+}
+
 .containerProducts h1 {
   text-align: center;
   padding-bottom: 67px;

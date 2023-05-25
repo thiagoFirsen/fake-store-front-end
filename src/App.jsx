@@ -14,7 +14,14 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<Product />} />
-          <Route path="*" element={<h1>404 ERROR</h1>} />
+          <Route
+            path="*"
+            element={
+              <h1 style={{ textAlign: "center" }}>
+                404 ERROR - PAGE NOT FOUND
+              </h1>
+            }
+          />
         </Routes>
         <Footer />
       </BrowserRouter>
