@@ -19,9 +19,7 @@ function App() {
             path="*"
             element={
               <div className="main">
-                <h1 style={{ textAlign: "center" }}>
-                  404 ERROR - PAGE NOT FOUND
-                </h1>
+                <img src="./src/assets/404/404.jpg" alt="teste" />
               </div>
             }
           />

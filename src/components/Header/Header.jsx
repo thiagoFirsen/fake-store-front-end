@@ -12,7 +12,6 @@ const Header = () => {
       <nav>
         <Link to="/">Home</Link>
         <Link to="/Products">Products</Link>
-        <Link to="/Contacts">Contacts</Link>
       </nav>
       <div className="cointainerButtonImg">
         <button className="customButton">

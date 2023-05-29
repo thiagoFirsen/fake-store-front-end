@@ -1,0 +1,44 @@
+.containerSelect {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 449px;
+  height: 64px;
+  background: #ffffff;
+  border: 1px solid #c1dcdc;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.containerSelect:focus-within {
+  outline: 2px solid #c1dcdc;
+}
+
+.containerSelect select {
+  width: 449px;
+  border: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../../assets/Product/setaPraBaixo.svg");
+  /* background-image: url("../../assets/porfavor.svg"); */
+  /* background-image: url("../../assets/imagem-teste.png"); */
+  background-position: 95.5% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 12px;
+  text-transform: capitalize;
+}
+
+.containerSelect option {
+  background-color: #c1dcdc;
+  text-transform: capitalize;
+}

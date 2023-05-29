@@ -2,17 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  height: 977px;
-  align-items: center;
+  gap: 59px;
+  padding: 85px 96px 54px 96px;
   background: #ffffff;
 }
 
 .cointanerCardCategories {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 96px;
+  gap: 48px;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 #buttonCategories {

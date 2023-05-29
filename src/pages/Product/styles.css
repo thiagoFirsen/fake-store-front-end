@@ -1,8 +1,9 @@
 .cointanerProduct {
-  height: 674px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  gap: 48px;
+  padding: 85px 96px;
 }
 
 .coitainerResumeProduct {
@@ -10,7 +11,9 @@
   flex-direction: column;
   align-items: center;
 }
-
+.cointanerProduct .cardProduct:hover {
+  transform: none;
+}
 .coitainerResumeProduct h1 {
   font-family: "Poppins";
   font-style: normal;

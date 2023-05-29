@@ -1,8 +1,11 @@
 .cardProduct {
   width: 299.33px;
-  height: 436px;
+  transition: transform 0.3s;
 }
 
+.cardProduct:hover {
+  transform: translateY(-30px);
+}
 .cardProduct img {
   width: 299.33px;
   height: 363px;

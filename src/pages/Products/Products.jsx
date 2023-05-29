@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
 import CardProduct from "../../components/CardProduct/CardProduct";
-import { getProducts } from "../../services/products";
+import { getProducts, getCategories } from "../../services/products";
 import Input from "../../components/Input/Input";
 import Search from "../../assets/Product/Search.svg";
-import setaPraBaixo from "../../assets/Product/setaPraBaixo.svg";
 import "./styles.css";
 import { Link } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
+import Select from "../../components/Select/Select";
 
 const Products = () => {
   const [products, setProducts] = useState();
   const [productsFilter, setProductsFilter] = useState();
   const [filteredProducts, setFilteredProducts] = useState();
+
+  const [categories, setCategories] = useState();
+  const [categoriesFilter, setCategoriesFilter] = useState();
+  const [filteredCategories, setFilteredCategories] = useState();
 
   useEffect(() => {
     getProducts()
@@ -24,7 +28,32 @@ const Products = () => {
       });
   }, []);
 
+  useEffect(() => {
+    getCategories()
+      .then((response) => {
+        setCategories(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (categoriesFilter === "Procure por Categoria") {
+      setFilteredProducts(products);
+    } else if (categoriesFilter) {
+      const productsFound = products.filter((product) => {
+        return product.category === categoriesFilter;
+      });
+      setFilteredProducts(productsFound);
+    }
+  }, [categoriesFilter]);
+
   const handleSearchInput = (event) => setProductsFilter(event.target.value);
+  const handleSelectChange = (event) => {
+    setCategoriesFilter(event.target.value);
+    setFilteredCategories(categoriesFilter);
+  };
 
   const handleSearchButton = () => {
     const normalizedFilter = productsFilter.toLowerCase();
@@ -33,6 +62,10 @@ const Products = () => {
     });
     setFilteredProducts(productsFound);
   };
+
+  const filtredOptionsCategories = categories?.map((category, index) => (
+    <option key={index}>{category}</option>
+  ));
 
   return (
     <div className="containerProducts">
@@ -44,18 +77,20 @@ const Products = () => {
           onChange={handleSearchInput}
           onClick={handleSearchButton}
         />
-        <Input
-          type="text"
-          placeholder="Selecione a categoria"
-          img={setaPraBaixo}
+        <Select
+          id="selectCategories"
+          name="Categories"
+          select="Procure por Categoria"
+          children={filtredOptionsCategories}
+          onChange={handleSelectChange}
         />
       </div>
       <h1>Products</h1>
       {products ? (
-        <div className="containerCardProduct">
+        <div className="containerCardProduct main">
           {filteredProducts?.map((product) => {
             return (
-              <Link to={`/Products/${product.id}`}>
+              <Link key={product.id} to={`/Products/${product.id}`}>
                 <CardProduct
                   key={product.id}
                   img={product.image}

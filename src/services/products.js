@@ -5,10 +5,19 @@ export async function getProducts() {
   return response.data;
 }
 
+export async function getProductsBestSelling() {
+  const response = await api.get("products/bestSelling");
+  return response.data;
+}
 export async function getProduct(id) {
   const response = await api.get(`products/${id}`);
   if (response.data === "") {
     return alert("Produto não encontrado");
   }
+  return response.data;
+}
+
+export async function getCategories() {
+  const response = await api.get("/products/categories");
   return response.data;
 }

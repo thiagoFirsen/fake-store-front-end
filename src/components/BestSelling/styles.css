@@ -1,8 +1,7 @@
 .containerBestSelling {
   display: flex;
-  height: 532px;
-  display: flex;
-  padding: 47px 96px 50px 96px;
+  justify-content: space-around;
+  padding: 60px 96px;
 }
 
 .descriptionBestSelling {
@@ -47,14 +46,20 @@
   font-size: 18px;
   line-height: 27px;
   color: #1e1e1e;
-}
-
-.cointainerProductsBestSelling {
-  display: flex;
-  gap: 48px;
+  cursor: pointer;
 }
 
 .descriptionBestSelling button img {
   width: 24px;
   height: 20px;
+}
+
+.cointainerProductsBestSelling {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+a {
+  text-decoration: none;
 }

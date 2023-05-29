@@ -28,7 +28,7 @@ const Product = () => {
   };
 
   return (
-    <div className="cointanerProduct">
+    <div className="cointanerProduct main">
       {product ? (
         <div className="coitainerResumeProduct">
           <h1>{product.title}</h1>
