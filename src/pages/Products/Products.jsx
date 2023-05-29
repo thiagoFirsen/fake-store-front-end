@@ -10,7 +10,7 @@ import Select from "../../components/Select/Select";
 
 const Products = () => {
   const [products, setProducts] = useState();
-  const [productsFilter, setProductsFilter] = useState();
+  const [researchedProduct, setResearchedProduct] = useState();
   const [filteredProducts, setFilteredProducts] = useState();
 
   const [categories, setCategories] = useState();
@@ -49,14 +49,14 @@ const Products = () => {
     }
   }, [categoriesFilter]);
 
-  const handleSearchInput = (event) => setProductsFilter(event.target.value);
+  const handleSearchInput = (event) => setResearchedProduct(event.target.value);
   const handleSelectChange = (event) => {
     setCategoriesFilter(event.target.value);
     setFilteredCategories(categoriesFilter);
   };
 
   const handleSearchButton = () => {
-    const normalizedFilter = productsFilter.toLowerCase();
+    const normalizedFilter = researchedProduct.toLowerCase();
     const productsFound = products.filter((product) => {
       return product.title.toLowerCase().includes(normalizedFilter);
     });

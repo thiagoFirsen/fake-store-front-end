@@ -5,6 +5,7 @@ import Product from "./pages/Product/Product";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import "./app.css";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   return (
@@ -15,14 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<Product />} />
-          <Route
-            path="*"
-            element={
-              <div className="main">
-                <img src="./src/assets/404/404.jpg" alt="teste" />
-              </div>
-            }
-          />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

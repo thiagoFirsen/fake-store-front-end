@@ -1,4 +1,5 @@
 import "./styles.css";
+import setaPrabaixo from "../../assets/Product/setaPrabaixo.svg";
 const Select = ({ id, name, select, children, onChange }) => {
   return (
     <div className="containerSelect">
@@ -6,7 +7,9 @@ const Select = ({ id, name, select, children, onChange }) => {
         <option>{select}</option>
         {children}
       </select>
-      <div className="arrow"></div>
+      <button>
+        <img src={setaPrabaixo} alt="" />
+      </button>
     </div>
   );
 };

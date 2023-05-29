@@ -46,3 +46,6 @@ nav a {
   padding: 0;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+}
