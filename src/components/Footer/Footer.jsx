@@ -23,39 +23,41 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="containerFooter">
-        <div className="containerText">
-          <h3>GREENMIND</h3>
-          <p>We help you find your dream plant</p>
+      <div className="footer">
+        <div className="containerFooter">
+          <div className="containerText">
+            <h3>SHOPEFIRSEN</h3>
+            <p>Nós podemos te ajudar a achar o que você deseja</p>
+          </div>
+          <div className="containerLinks">
+            <Link to="https://www.facebook.com/" target="_blank">
+              <img src={facebook} alt="" />
+            </Link>
+            <Link to="https://www.instagram.com/" target="_blank">
+              <img src={instagram} alt="" />
+            </Link>
+            <Link to="https://twitter.com/home" target="_blank">
+              <img src={twitter} alt="" />
+            </Link>
+          </div>
         </div>
-        <div className="containerLinks">
-          <Link to="https://www.facebook.com/" target="_blank">
-            <img src={facebook} alt="" />
-          </Link>
-          <Link to="https://www.instagram.com/" target="_blank">
-            <img src={instagram} alt="" />
-          </Link>
-          <Link to="https://twitter.com/home" target="_blank">
-            <img src={twitter} alt="" />
-          </Link>
-        </div>
-        <div className="textFooter">
-          2023 all Right Reserved Term of use GREENMIND
+        <div className="containerInformations">
+          {informations.map((information) => {
+            return (
+              <CardFooter
+                key={information.title}
+                title={information.title}
+                description1={information.description[0]}
+                description2={information.description[1]}
+                description3={information.description[2]}
+              />
+            );
+          })}
         </div>
       </div>
-      <div className="containerInformations">
-        {informations.map((information) => {
-          return (
-            <CardFooter
-              key={information.title}
-              title={information.title}
-              description1={information.description[0]}
-              description2={information.description[1]}
-              description3={information.description[2]}
-            />
-          );
-        })}
-      </div>
+      <p className="textFooter">
+        2023 all Right Reserved Term of use GREENMIND
+      </p>
     </footer>
   );
 };
