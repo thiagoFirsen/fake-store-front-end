@@ -19,11 +19,15 @@ const BestSelling = () => {
   return (
     <div className="containerBestSelling">
       <div className="descriptionBestSelling">
-        <h1>Best Selling Products</h1>
-        <h2>Easiest way to healthy life by buying your favorite plants </h2>
+        <h1>Produtos Mais vendidos</h1>
+        <h2>
+          A maneira mais fácil de ter um estilo de vida moderno e tecnológico é
+          comprando seus produtos de moda e eletrônicos favoritos.
+        </h2>
         <Link to="/products">
           <button>
-            See more <img src={ArrowRight} alt="" />
+            Ver Mais
+            <img src={ArrowRight} alt="" />
           </button>
         </Link>
       </div>

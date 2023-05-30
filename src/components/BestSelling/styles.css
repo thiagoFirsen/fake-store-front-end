@@ -7,9 +7,8 @@
 .descriptionBestSelling {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   width: 256px;
-  height: 264px;
+  gap: 24px;
 }
 
 .descriptionBestSelling h1 {

@@ -4,14 +4,17 @@ import Cart from "../../assets/Header/Cart.svg";
 import FilterRight from "../../assets/Header/FilterRight.svg";
 import Line1 from "../../assets/Header/Line 1.svg";
 import Person from "../../assets/Header/Person.svg";
+import Logo from "../../assets/Header/logo.svg";
 
 const Header = () => {
   return (
     <header>
-      <h1>GREENMIND</h1>
+      <h1>
+        <img src={Logo} alt="" />
+      </h1>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/Products">Products</Link>
+        <Link to="/Products">Produtos</Link>
       </nav>
       <div className="cointainerButtonImg">
         <button className="customButton">

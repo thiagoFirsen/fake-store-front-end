@@ -10,7 +10,9 @@
 .cointanerCardCategories {
   display: flex;
   align-items: center;
-  gap: 48px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 38px;
   text-align: center;
   text-transform: capitalize;
 }

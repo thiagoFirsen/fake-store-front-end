@@ -10,30 +10,32 @@ const About = () => {
     <div className="cointainerAbout">
       <div className="about">
         <Title
-          title={"About us"}
-          description={"Order now and appreciate the beauty of nature"}
+          title={"Sobre Nós"}
+          description={
+            "Compre agora e aprecie a beleza da natureza através dos seus produtos de moda e eletrônicos favoritos."
+          }
         />
       </div>
       <div className="cointanerCard">
         <CardAbout
           img={plaint}
-          title={"Large Assortment"}
+          title={"Produtos Sustentáveis"}
           description={
-            "we offer many different types of products with fewer variations in each category."
+            "Oferecemos uma enorme variedade de produtos, além de serem produtos ecológicos."
           }
         />
         <CardAbout
           img={box}
-          title={"Fast & Free Shipping"}
+          title={"Frete rápido e gratuito"}
           description={
-            "4-day or less delivery time, free shipping and an expedited delivery option."
+            "Prazo de entrega de 4 dias ou menos, frete grátis e opção de entrega acelerada."
           }
         />
         <CardAbout
           img={phone}
           title={"24/7 Support"}
           description={
-            "answers to any business related inquiry 24/7 and in real-time."
+            "Respostas a qualquer consulta relacionada a negócios 24 horas por dia, 7 dias por semana e em tempo real."
           }
         />
       </div>

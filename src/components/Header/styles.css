@@ -9,13 +9,9 @@ header {
   padding: 45px 96px;
 }
 
-header h1 {
-  font-family: "Abhaya Libre";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
-  color: #1e1e1e;
+header h1 img {
+  width: 100px;
+  height: 100px;
 }
 
 nav {

@@ -3,6 +3,8 @@ import CardProduct from "../../components/CardProduct/CardProduct";
 import { getProducts, getCategories } from "../../services/products";
 import Input from "../../components/Input/Input";
 import Search from "../../assets/Product/Search.svg";
+import noProduct from "../../assets/Product/no-product.png";
+
 import "./styles.css";
 import { Link } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
@@ -10,12 +12,12 @@ import Select from "../../components/Select/Select";
 
 const Products = () => {
   const [products, setProducts] = useState();
-  const [researchedProduct, setResearchedProduct] = useState();
+  const [searchedProduct, setSearchedProduct] = useState();
   const [filteredProducts, setFilteredProducts] = useState();
 
   const [categories, setCategories] = useState();
-  const [categoriesFilter, setCategoriesFilter] = useState();
-  const [filteredCategories, setFilteredCategories] = useState();
+
+  const [categorySelected, setCategorySelected] = useState();
 
   useEffect(() => {
     getProducts()
@@ -39,33 +41,49 @@ const Products = () => {
   }, []);
 
   useEffect(() => {
-    if (categoriesFilter === "Procure por Categoria") {
-      setFilteredProducts(products);
-    } else if (categoriesFilter) {
-      const productsFound = products.filter((product) => {
-        return product.category === categoriesFilter;
+    let productsFound;
+    if (searchedProduct) {
+      const normalizedFilter = searchedProduct?.toLowerCase();
+      productsFound = products?.filter((product) => {
+        return product.title.toLowerCase().includes(normalizedFilter);
       });
-      setFilteredProducts(productsFound);
+    } else {
+      productsFound = products;
     }
-  }, [categoriesFilter]);
 
-  const handleSearchInput = (event) => setResearchedProduct(event.target.value);
+    categorySelected === "Procure por Categoria"
+      ? setFilteredProducts(productsFound)
+      : setFilteredProducts(
+          productsFound?.filter(
+            (product) => product.category === categorySelected
+          )
+        );
+  }, [categorySelected]);
+
+  const handleSearchInput = (event) => setSearchedProduct(event.target.value);
   const handleSelectChange = (event) => {
-    setCategoriesFilter(event.target.value);
-    setFilteredCategories(categoriesFilter);
+    setCategorySelected(event.target.value);
   };
 
   const handleSearchButton = () => {
-    const normalizedFilter = researchedProduct.toLowerCase();
-    const productsFound = products.filter((product) => {
+    const normalizedFilter = searchedProduct.toLowerCase();
+    const productsFound = products?.filter((product) => {
       return product.title.toLowerCase().includes(normalizedFilter);
     });
-    setFilteredProducts(productsFound);
+    categorySelected === "Procure por Categoria"
+      ? setFilteredProducts(productsFound)
+      : setFilteredProducts(
+          productsFound.filter((product) => {
+            return product.category === categorySelected;
+          })
+        );
   };
 
   const filtredOptionsCategories = categories?.map((category, index) => (
     <option key={index}>{category}</option>
   ));
+
+  console.log(filteredProducts);
 
   return (
     <div className="containerProducts">
@@ -85,8 +103,13 @@ const Products = () => {
           onChange={handleSelectChange}
         />
       </div>
-      <h1>Products</h1>
-      {products ? (
+      <h1>Produtos</h1>
+
+      {filteredProducts?.length === 0 ? (
+        <h1 id="imgNoProduct">
+          <img src={noProduct} />
+        </h1>
+      ) : products ? (
         <div className="containerCardProduct main">
           {filteredProducts?.map((product) => {
             return (

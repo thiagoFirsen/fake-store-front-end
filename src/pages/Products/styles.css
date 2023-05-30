@@ -19,6 +19,10 @@
   color: #1e1e1e;
 }
 
+#imgNoProduct {
+  text-align: center;
+}
+
 .containerCardProduct {
   display: flex;
   flex-wrap: wrap;

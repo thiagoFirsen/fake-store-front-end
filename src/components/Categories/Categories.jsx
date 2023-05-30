@@ -10,8 +10,8 @@ const Categories = () => {
   const mockCategoriesPictures = [
     "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
     "https://images.unsplash.com/photo-1600721391689-2564bb8055de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=406&q=80",
-    "https://images.unsplash.com/photo-1516258454449-64fed1caa732?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
-    "https://images.unsplash.com/photo-1564463836390-947f23837e02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+    "https://images.unsplash.com/photo-1520975916090-3105956dac38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+    "https://plus.unsplash.com/premium_photo-1661777373172-65269ff71d2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
   ];
   const [categories, setCategories] = useState();
   useEffect(() => {
@@ -23,8 +23,8 @@ const Categories = () => {
   return (
     <div className="coitainerCategories">
       <Title
-        title={"Categories"}
-        description={"Find what you are looking for"}
+        title={"Categorias"}
+        description={"Procure o que você esteja procurando"}
       />
       <div className="cointanerCardCategories">
         {categories?.map((category, index) => {
