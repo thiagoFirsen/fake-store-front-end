@@ -8,16 +8,16 @@ import CardFooter from "./CardFooter";
 const Footer = () => {
   const informations = [
     {
-      title: "Information",
-      description: ["About", "Product", "Blog"],
+      title: "Informações",
+      description: ["Sobre", "Produtos", "Blog"],
     },
     {
-      title: "Company",
-      description: ["Community", "Career", "Out story"],
+      title: "Companhia",
+      description: ["Comunidade", "Carreira", "Nossa Historia"],
     },
     {
-      title: "Contact",
-      description: ["Getting Started", "Pricing", "Resources"],
+      title: "Contato",
+      description: ["Começando", "Preços", "Recursos"],
     },
   ];
 
@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="textFooter">
-        2023 all Right Reserved Term of use GREENMIND
+        2023 all Right Reserved Term of use SHOPEFIRSEN
       </p>
     </footer>
   );
