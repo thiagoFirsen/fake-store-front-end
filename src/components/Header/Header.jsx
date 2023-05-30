@@ -21,10 +21,17 @@ const Header = () => {
             Home
           </NavLink>
           <NavLink
-            to="/Products"
+            to="/products"
             className={({ isActive }) => (isActive ? "active" : "noActive")}
           >
             Produtos
+          </NavLink>
+
+          <NavLink
+            to="/productRegister"
+            className={({ isActive }) => (isActive ? "active" : "noActive")}
+          >
+            Cadastro de Produto
           </NavLink>
         </div>
       </nav>

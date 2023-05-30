@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import "./app.css";
 import NotFound from "./components/NotFound/NotFound";
+import ProductRegister from "./pages/ProductRegister/ProductRegister";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<Product />} />
+          <Route path="/productRegister" element={<ProductRegister />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

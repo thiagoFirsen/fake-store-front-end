@@ -77,8 +77,6 @@ footer {
 
 .containerInformations {
   display: flex;
-  flex: 1;
-  flex-direction: row-reverse;
   padding-right: 96px;
   width: 452px;
   height: 180px;

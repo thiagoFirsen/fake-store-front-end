@@ -2,8 +2,6 @@ header {
   height: 120px;
   background-color: #c1dcdc;
   display: flex;
-  padding: 45px 96px;
-  gap: 25px;
 }
 
 header nav h1 img {
@@ -14,8 +12,8 @@ header nav h1 img {
 nav {
   display: flex;
   align-items: center;
-  flex: 1;
-  gap: 107px;
+  justify-content: space-around;
+  flex: 2;
 }
 
 .linksNav {
@@ -35,8 +33,9 @@ nav a {
 
 .cointainerButtonImg {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 48px;
+  flex: 1;
 }
 
 .customButton {

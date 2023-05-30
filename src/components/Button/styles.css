@@ -1,0 +1,13 @@
+.buttonDefault {
+  width: 141px;
+  height: 51px;
+  border: 2px solid #c1dcdc;
+  border-radius: 8px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #1e1e1e;
+  cursor: pointer;
+}

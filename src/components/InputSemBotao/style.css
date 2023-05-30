@@ -1,0 +1,32 @@
+.inputSemBotao {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.inputSemBotao label {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
+}
+
+.inputSemBotao input {
+  height: 64px;
+  background: #ffffff;
+  border: 1px solid #c1dcdc;
+  border-radius: 12px;
+  padding: 18px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
+}
+
+.inputSemBotao input:focus-within {
+  outline: 2px solid #c1dcdc;
+}

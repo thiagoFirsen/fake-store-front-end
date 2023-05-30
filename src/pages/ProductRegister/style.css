@@ -1,0 +1,39 @@
+.registerProductCointainer {
+  padding-top: 66px;
+  padding-bottom: 114px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 37px;
+}
+
+.registerProductCointainer h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: #1e1e1e;
+}
+
+.formRegisterProduct {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 22px;
+}
+
+.customizeLabel {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(30, 30, 30, 0.5);
+}
+
+.coitainerButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+}

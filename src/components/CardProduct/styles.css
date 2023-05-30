@@ -6,9 +6,20 @@
 .cardProduct:hover {
   transform: translateY(-30px);
 }
-.cardProduct img {
+
+.imageCointainer {
   width: 299.33px;
   height: 363px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardProduct img {
+  width: auto;
+  max-width: 100%;
+  max-height: 363px;
   border-radius: 12px;
 }
 

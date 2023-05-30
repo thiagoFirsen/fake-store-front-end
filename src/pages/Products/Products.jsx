@@ -17,7 +17,9 @@ const Products = () => {
 
   const [categories, setCategories] = useState();
 
-  const [categorySelected, setCategorySelected] = useState();
+  const [categorySelected, setCategorySelected] = useState(
+    "Procure por Categoria"
+  );
 
   useEffect(() => {
     getProducts()

@@ -1,6 +1,6 @@
 import "./styles.css";
 import setaPrabaixo from "../../assets/Product/setaPrabaixo.svg";
-const Select = ({ id, name, select, children, onChange }) => {
+const Select = ({ id, label, name, select, children, onChange }) => {
   return (
     <div className="containerSelect">
       <select id={id} name={name} onChange={onChange}>
