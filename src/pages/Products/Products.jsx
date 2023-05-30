@@ -83,8 +83,6 @@ const Products = () => {
     <option key={index}>{category}</option>
   ));
 
-  console.log(filteredProducts);
-
   return (
     <div className="containerProducts">
       <div className="containerInputs">

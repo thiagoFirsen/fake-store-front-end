@@ -1,5 +1,4 @@
 footer {
-  width: 100%;
   height: 400px;
   background-color: #c1dcdc;
   padding-left: 96px;
@@ -78,7 +77,8 @@ footer {
 
 .containerInformations {
   display: flex;
-  flex-direction: row;
+  flex: 1;
+  flex-direction: row-reverse;
   padding-right: 96px;
   width: 452px;
   height: 180px;

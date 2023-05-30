@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./styles.css";
 import Cart from "../../assets/Header/Cart.svg";
 import FilterRight from "../../assets/Header/FilterRight.svg";
@@ -9,12 +9,24 @@ import Logo from "../../assets/Header/logo.svg";
 const Header = () => {
   return (
     <header>
-      <h1>
-        <img src={Logo} alt="" />
-      </h1>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/Products">Produtos</Link>
+        <h1>
+          <img src={Logo} alt="" />
+        </h1>
+        <div className="linksNav">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "noActive")}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/Products"
+            className={({ isActive }) => (isActive ? "active" : "noActive")}
+          >
+            Produtos
+          </NavLink>
+        </div>
       </nav>
       <div className="cointainerButtonImg">
         <button className="customButton">

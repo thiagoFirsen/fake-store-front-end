@@ -1,6 +1,6 @@
 .containerInputs {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 55px 60px 57px 68px;
 }
 
